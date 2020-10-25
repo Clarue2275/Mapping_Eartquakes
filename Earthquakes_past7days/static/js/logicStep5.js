@@ -127,12 +127,13 @@ style: styleInfo,
 
   // create a legend control object
     let legend = L.control({
-      position: "bottomright"
-    });
+      position: 'bottomright'});
+
 // add all the details for the legend.
     legend.onAdd = function () {
     
-        let div = L.DomUtil.create("div", "info legend");
+        let div = L.DomUtil.create('div', 'info legend');
+   
     
     const magnitudes = [0, 1, 2, 3, 4, 5];
     const colors = [
@@ -143,7 +144,7 @@ style: styleInfo,
       "#ea822c",
       "#ea2c2c"
     ];
-    
+  
        // Looping through our intervals to generate a label with a colored square for each interval.
    for (var i = 0; i < magnitudes.length; i++) {
     console.log(colors[i]);
