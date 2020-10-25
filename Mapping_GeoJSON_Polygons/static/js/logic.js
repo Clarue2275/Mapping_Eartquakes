@@ -3,7 +3,7 @@ console.log("working");
 
 
 // We create the tile layer that will be the background of our map.
-let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/sreets-v11/tiles/{z}/{x}/{y}?access_token={accessToken}', {
 attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
     
@@ -33,20 +33,20 @@ let map = L.map('mapid', {
   layers: [satelliteStreets]
 })
 
-// Pass our map layers into our layers control and add the layers control to the map.
-L.control.layers(baseMaps).addTo(map);
+// // Pass our map layers into our layers control and add the layers control to the map.
+// L.control.layers(baseMaps).addTo(map);
 
-// Then we add our 'graymap' tile layer to the map.
-streets.addTo(map); 
+// // Then we add our 'graymap' tile layer to the map.
+// streets.addTo(map); 
 
 // Accessing the airport GeoJSON URL
-let torontoHoods = "https://raw.githubusercontent.com/Clarue2275/Mapping_Eartquakes/main/Mapping_GeoJSON_Polygons/torontoRoutes.json";
+let torontoHoods = "https://raw.githubusercontent.com/Clarue2275/Mapping_Eartquakes/main/Mapping_GeoJSON_Polygons/torontoNeighborhoods.json";
 
-// Create a style for the lines.
-let myStyle = {
-  color: "#ffffa1",
-  weight: 2
-}
+// // Create a style for the lines.
+// let myStyle = {
+//   color: "#ffffa1",
+//   weight: 2
+// }
 
 // Grabbing our GeoJSON data.
 d3.json(torontoHoods).then(function(data) {
